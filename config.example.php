@@ -5,7 +5,7 @@ catch(Exception $x){die('No se pudo conectar a la base de datos. Ejecuta <a href
 const REGIONES=['Amazonas','Ancash','Apurímac','Arequipa','Ayacucho','Cajamarca','Cusco','Huancavelica','Huánuco','Ica','Junín','La Libertad','Lima','Loreto','Piura','Puno','San Martín','Ucayali'];
 function e($s){return htmlspecialchars((string)$s,ENT_QUOTES,'UTF-8');}
 function user(){return $_SESSION['u']??null;}
-function need($role=null){if(!user()||($role&&user()['role']!==$role)){header('Location: auth.php');exit;}}
+function need($role=null){if(!user()||($role&&user()['role']!==$role)){header('Location: index.php?r=auth/login');exit;}}
 function money($n){return 'S/ '.number_format((float)$n,2);}
 function csrf(){return $_SESSION['t']??($_SESSION['t']=bin2hex(random_bytes(16)));}
 function chk(){if(!hash_equals($_SESSION['t']??'x',$_POST['t']??''))die('Sesión inválida, recarga la página.');}
