@@ -18,4 +18,5 @@ if($pdo->query('SELECT COUNT(*) FROM categories')->fetchColumn()==0){
  $p->execute([$b,2,'Jarra de cerámica pintada','Pintada a mano, capacidad 1 litro.',48,12]);
  $p->execute([$b,7,'Cántaro decorativo','Pieza decorativa de 30 cm de alto.',90,5]);
 }
+if(PHP_SAPI==='cli'){echo "Tinkuy instalado.\nUsuarios demo (clave 123456): vendedor@tinkuy.test | comprador@tinkuy.test\nInicia el servidor con: php -S localhost:8000\n";return;}
 echo '<h2>Tinkuy instalado ✔</h2><p>Base de datos lista. Usuarios demo (clave 123456): vendedor@tinkuy.test · comprador@tinkuy.test</p><p><a href="index.php">Ir a la tienda</a></p><p>Por seguridad, borra este archivo ahora.</p>';
