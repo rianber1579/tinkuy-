@@ -1,0 +1,4 @@
+<?php include __DIR__.'/_tabs.php';?>
+<div class="stats"><div><b><?=money($m['tot'])?></b>Ventas totales</div><div><b><?=$m['ped']?></b>Pedidos</div><div><b><?=$m['uni']?></b>Unidades vendidas</div><div><b><?=$m['pend']?></b>Por enviar</div></div>
+<h2>Ventas de los últimos 7 días</h2><div class="bars"><?php foreach($dia as $d):?><div><i style="height:<?=round($d['m']/$mx*100)?>%"></i><small><?=substr($d['d'],5)?><br><?=money($d['m'])?></small></div><?php endforeach;if(!$dia)echo '<p class="muted">Todavía no hay ventas esta semana.</p>';?></div>
+<h2>Más vendidos</h2><table><?php foreach($top as $x):?><tr><td><?=e($x['name'])?></td><td><?=$x['u']?> uds</td><td><?=money($x['m'])?></td></tr><?php endforeach;?></table>
