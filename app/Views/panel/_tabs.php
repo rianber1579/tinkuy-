@@ -1,0 +1,1 @@
+<h1><?=e($st['name'])?></h1><div class="tabs"><?php foreach(['resumen'=>'Métricas','productos'=>'Productos','pedidos'=>'Pedidos','tienda'=>'Mi tienda'] as $k=>$v):?><a class="<?=$t===$k?'on':''?>" href="<?=url('panel/index',['t'=>$k])?>"><?=$v?></a><?php endforeach;?></div>

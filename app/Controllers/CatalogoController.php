@@ -5,7 +5,7 @@ class CatalogoController{
   if(!$p){http_response_code(404);exit('Producto no encontrado. <a href="index.php">Volver</a>');}
   view('catalogo/detalle',['title'=>$p['name'],'p'=>$p,'rv'=>Resena::delProducto($id)]);}
  function resenar(){need('buyer');chk();$id=(int)$_POST['id'];
-  if(!Pedido::compro(user()['id'],$id))flash('Solo puedes valorar productos que compraste.');
+  if(!Pedido::compro(user()['id'],$id))flash('Solo puedes valorar productos que compraste.','err');
   else{Resena::guardar($id,user()['id'],(int)$_POST['rating'],trim($_POST['comment']??''));flash('Gracias por tu valoración.');}
   go('catalogo/detalle',['id'=>$id]);}
 }

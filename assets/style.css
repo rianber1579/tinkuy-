@@ -27,3 +27,4 @@ table{width:100%;border-collapse:collapse;margin:1rem 0}td,th{padding:.7rem .5re
 .tag{padding:.1rem .6rem;border-radius:99px;font-size:.85rem;background:var(--ochre);color:#222}.tag.entregado{background:var(--moss);color:#fff}.tag.enviado{background:var(--indigo);color:#fff}
 .foot{text-align:center;padding:1.5rem;opacity:.85}.weave{height:14px;background:repeating-linear-gradient(90deg,var(--indigo) 0 20px,var(--madder) 20px 40px,var(--ochre) 40px 60px,var(--moss) 60px 80px);margin-bottom:1rem}
 @media(max-width:700px){.detail{grid-template-columns:1fr}}
+.flash.err{background:var(--madder)}
